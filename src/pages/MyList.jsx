@@ -64,7 +64,7 @@ function MyList(){
                     )))}
                 </div>
             ) : (
-                <h2> Your List is empty </h2>
+                <h2 className="placeholder-text"> Your List is empty </h2>
             )}
         </div>
     )
