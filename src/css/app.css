@@ -1,0 +1,38 @@
+/* Import fonts (if using Google Fonts or other web fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* Replace 'Poppins' with your preferred font */
+
+/* Global font styles */
+* {
+  font-family: 'Poppins', sans-serif; /* Primary font with fallbacks */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+p, span, div, button, input {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+
+.pokemon-title {
+  font-family: 'Flexo', 'Noto Sans', sans-serif;
+  font-weight: 700;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: rgba(30, 30, 40, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E6B2FF;
+  border-radius: 4px;
+}

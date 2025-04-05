@@ -1,0 +1,134 @@
+.pokedex-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0; /* Increased padding-top */
+    z-index: 1000;
+    text-align: center; /* Center the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokedex-container h1 {
+    color: #fafaff;
+    margin-bottom: 15px; /* Space between title and search bar */
+}
+
+.pokedex-set-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 190px auto 50px; /* Adjusted top margin to account for header height */
+    max-width: 1200px; /* Optional: limit maximum width */
+    gap: 20px; /* Add spacing between packs */
+    padding: 0 20px; /* Side padding */
+}
+
+.pokedex-header-fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 180px; /* Match the height from your current setup */
+    background: linear-gradient(to bottom, var(--bg-color, #121212) 40%, rgba(255,255,255,0) 100%);
+    z-index: 900;
+    pointer-events: none;
+}
+
+.pokedex-header-fade {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Fade effect for items approaching the header */
+.pokedex-set-container::before {
+    display: none;
+}
+
+.pokedex-blur-background {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+.pokedex-set-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+    background-color: rgba(0, 0, 0, 0.7);
+    pointer-events: auto; /* Allow clicks through to close */
+}
+
+.pokedex-set-opening-overlay {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0; /* Add some padding */
+}
+
+.pokedex-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive */
+    justify-content: center;  /* Horizontally center the grid */
+    gap: 20px;
+    padding: 0px 40px;
+    max-width: 1200px; /* Optional: keep it from spreading too wide */
+}
+
+.pokedex-cards-container::-webkit-scrollbar{
+    display: none;
+}
+
+.pokedex-set-opening {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 90vh; /* Limit maximum height */
+    width: 100%;
+}
+
+.pokedex-set-opening button {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: #E6B2FF;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+  
+.pokedex-set-opening button:hover {
+    transform: scale(1.1);
+}
+  
+.pokedex-set-opening button span.material-symbols-outlined {
+    font-size: 24px;
+    color: black;
+}
+
+/* Make sure search bar fits nicely */
+.pokedex-container .search-bar {
+    width: 300px;
+    margin: 0 auto;
+}

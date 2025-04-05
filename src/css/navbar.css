@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: 0.5s;
+}
+
+.navigation {
+    position: fixed;
+    top: 50vh; 
+    left: 20px;
+    background-color: #30343F;
+    width: 70px;
+    height: 400px;
+    border-radius: 35px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,1);
+    z-index: 1000; 
+    transform: translateY(-50%); 
+}
+
+
+.navigation ul {
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation ul li {
+    list-style: none;
+    width: 70px;
+    height: 100%; 
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color:  #fafaff;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.icon i {
+    font-size: 24px;
+}
+
+.title{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    left: 110px;
+    transform: translateY(-50%);
+    padding: 5px 10px;
+    transition: 0.5s;
+    box-shadow: 0 05px 15px (0,0,0,0,1);
+    opacity: 0;
+    visibility: none;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.navigation ul li:hover .title{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-25px) translateY(-50%);
+}
+
+.title::before{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height:12px;
+    left:-8px ;
+    top: 40%;
+    transition: 0.5s;
+    transform: rotate(45deg) translateY(-50%);
+    border-radius: 2px;
+}
+
+.navigation ul .indicator{
+    position: absolute;
+    top: 10px;
+    transform: translate(-50%, 0);
+    width: 70px;
+    height: 70px;
+    transition: 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+.navigation ul .indicator::before{
+    content: "";
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: #fafaff;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.navigation ul li.active .icon{
+    color: #E6B2FF;
+}
+
+
+
+
