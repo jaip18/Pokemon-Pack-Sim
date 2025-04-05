@@ -1,12 +1,47 @@
-# React + Vite
+Pokémon Pack Simulator
+A visually engaging web application that simulates opening Pokémon card packs using real data from the Pokémon TCG API. Users can open randomized packs, explore a searchable Pokédex of cards, view cards grouped by set, and save their collection locally.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
+🎴 Pack Opening Animation – Click to open packs and reveal randomized cards with smooth 3D effects.
+🔍 Searchable Pokédex – Browse all available cards with search and set-filtering capabilities.
+📦 My List – Save and view all previously opened cards stored in localStorage.
+🧩 Set Viewer – Explore card sets and view all cards within a selected set.
+💡 Live Data – Powered by the Pokémon TCG API for real-time card and set information.
 
-Currently, two official plugins are available:
+🛠️ Technologies Used
+React 19
+Vite
+JavaScript (ES6+)
+CSS Modules
+Pokémon TCG API
+Framer Motion (for animations)
+React Three Fiber & Drei (for 3D Pokéball on homepage)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📦 Getting Started
+Installation
+bash
+Copy
+Edit
+git clone https://github.com/jaip18/pokemonPackSim.git
+cd pokemonPackSim
+npm install
+npm run dev
+Deployment
+This project is deployed using Vercel. Simply connect your GitHub repository and deploy!
 
-## Expanding the ESLint configuration
+📁 Folder Structure
+src/
+├── assets/            # API functions
+├── components/        # Reusable UI components
+├── pages/             # Main page components
+├── css/               # Modular CSS files
+├── App.jsx            # Main app wrapper
+└── main.jsx           # Entry point
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🙌 Acknowledgements
+Pokémon TCG API
+Framer Motion
+React Three Fiber
+Let me know if you'd like a shorter version or to add a GIF/demo link.
+
+***not completely finished yet
